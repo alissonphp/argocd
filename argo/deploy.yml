@@ -31,7 +31,7 @@ spec:
 #              topologyKey: kubernetes.io/hostname
       containers:
         - name: testeargo-container
-          image: nginx
+          image: registry.dev.infra.mateus/ithappens/financeiro-rest-fornecedor:0.2.13-1-dev
           ports:
             - containerPort: 8080
       terminationGracePeriodSeconds: 60
