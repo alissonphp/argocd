@@ -35,6 +35,14 @@ spec:
           args: [ "/deployments/run-java.sh", "--thin.root=/deployments/m2"]
           ports:
             - containerPort: 8080
+          env:
+            - name: JAVA_OPTIONS
+              value: >-
+                -Djava.security.egd=file:/dev/./urandom -XX:+UseG1GC
+                -Dserver.port=8080 
+                -Dapp.logging.host=logstash.dev.infra.mateus:5000
+                -Duser.timezone='America/Fortaleza'
+                -Dspring.profiles.active=dev,deploy
       terminationGracePeriodSeconds: 60
       #nodeSelector:
       #  kubernetes.io/hostname: ${NODE_KUBERNETES}
