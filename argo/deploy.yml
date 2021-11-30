@@ -33,7 +33,6 @@ spec:
         - name: testeargo-container
           image: alpine
           args: ["echo", "ola argo"]
-          imagePullPolicy: Always
           ports:
             - containerPort: 8080
       terminationGracePeriodSeconds: 60
