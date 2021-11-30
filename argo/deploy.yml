@@ -32,7 +32,6 @@ spec:
       containers:
         - name: testeargo-container
           image: alpine
-          args: ""
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
