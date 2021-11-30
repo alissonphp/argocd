@@ -32,6 +32,7 @@ spec:
       containers:
         - name: testeargo-container
           image: registry.dev.infra.mateus/ithappens/financeiro-rest-fornecedor:0.2.13-1-dev
+          args: [ "/deployments/run-java.sh", "--thin.root=/deployments/m2"]
           ports:
             - containerPort: 8080
       terminationGracePeriodSeconds: 60
