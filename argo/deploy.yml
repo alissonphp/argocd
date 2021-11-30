@@ -31,8 +31,7 @@ spec:
 #              topologyKey: kubernetes.io/hostname
       containers:
         - name: testeargo-container
-          image: alpine
-          args: ["echo", "ola argo"]
+          image: nginx
           ports:
             - containerPort: 8080
       terminationGracePeriodSeconds: 60
