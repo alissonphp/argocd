@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: testeargo
-  replicas: 69
+  replicas: 2
   revisionHistoryLimit: 3
   strategy:
     type: RollingUpdate
@@ -32,6 +32,7 @@ spec:
       containers:
         - name: testeargo-container
           image: alpine
+          args: ["echo", "ola argo"]
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
