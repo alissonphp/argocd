@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: testeargo
-  replicas: 2
+  replicas: 4
   revisionHistoryLimit: 3
   strategy:
     type: RollingUpdate
